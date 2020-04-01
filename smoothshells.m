@@ -1,6 +1,7 @@
 function [POut,tauOut,COut,X,Y] = smoothshells(input1,input2,param)
-% shells - load a pair of input shapes and compute the features and eigenpairs
+% smoothshells - compute correspondences for a pair of input shapes
 % input1,input2: either a mesh (as a struct) OR a file containing a mesh
+% param (optional): hyperparameters of the method
 
 if ~exist('param','var')
     param = struct;
@@ -11,7 +12,7 @@ kArray = [20,20+round(linspace(1,(param.kMax-20).^(1/4),param.kArrayLength).^4)]
 feat = struct;
 
 param.noPlot = false; %turn on/off for intermediate plots
-% param.GPUcorrespondences = false; % turn on/off if the GPU should be used for speedup
+param.GPUcorrespondences = true; % recommended option = true. Turn off, if no GPU is available
 
 %% load Shape
 
