@@ -28,7 +28,6 @@ S = vertDiff * vertDiffNew';
 S = blockstackmat(S,nVertDiff,3);
 S = constructblockmat(S,X.neigh.row,X.neigh.col,[X.n X.n])';
 S = blockstackmat(S,X.n,3);
-% S = constructblockmat(S,(1:X.n)',(1:X.n)',[X.n X.n])';
 S = full(S);
 R = zeros(size(S));
 

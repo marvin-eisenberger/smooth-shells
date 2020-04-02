@@ -14,16 +14,11 @@ function [vertOrigFull,w,R] = shiftedvertupsample(X,a)
     k = size(a,1);
     
     XSmooth = smoothshapesigmoid(X,k);
-%     YSmooth = XSmooth;
-    
-%     YSmooth.vert = XSmooth.vert + X.evecs(:,1:size(a,1)) * a;
     vertShifted = XSmooth.vert + X.evecs(:,1:size(a,1)) * a;
     
     R = determinerotationsshifted(XSmooth,vertShifted);
 
     w = real(transform_SO3_so3(R));
-
-%     w = X.evecs(:,1:k) * ((X.evecs(:,1:k)' * X.evecs(:,1:k)) \ X.evecs(:,1:k)' * w);
 
     R = so3_SO3(w);
 

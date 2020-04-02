@@ -73,8 +73,6 @@ function [X,Y,tau,feat,avgError,assignment,assignmentinv] = matchlayer(X,Y,feat,
     %output error, if gt is available
     if size(vertCurrFull,1)==size(YSmooth.vert,1) && param.intermediateOutput
         disp('max error: ' + string(max(normv(vertCurrFull-YSmooth.vert))) + ', mean error: ' + string(mean(normv(vertCurrFull-YSmooth.vert))))
-%         S = dbstack();
-%         disp('Current file: ' + string(S(end).file));
     end
 
     
