@@ -98,25 +98,3 @@ POut.assignment = featOut.assignment;
 POut.assignmentinv = featOut.assignmentinv;
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
