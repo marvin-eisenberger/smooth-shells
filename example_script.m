@@ -22,4 +22,4 @@ param.normalDamping = 0.04;
 param.numMCMC = 100;
 
 %execute main script
-[P,tau,C,X,Y] = smoothshells(file1,file2);
+[P,tau,C,X,Y] = smoothshells(file1,file2,param);
