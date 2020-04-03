@@ -8,7 +8,7 @@ function [V,F] = read_obj(filename)
   % Output:
   %  V  number of vertices x 3 array of vertex positions
   %  F  number of faces x 3 array of face indices
-  %
+  % Copyright (c) 2007 Gabriel Peyre
   V = zeros(0,3);
   F = zeros(0,3);
   vertex_index = 1;
