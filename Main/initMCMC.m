@@ -25,7 +25,7 @@ function [Cfix,ainit,iMin,errorArrayGT,errorArray] = initMCMC(X,Y,param,kMin,kMa
     param.intermediateOutput = false;
     
     
-    numProp = 100;
+    numProp = param.numMCMC;
     
     feat = struct;
     feat.wCurr = zeros(X.n,3);

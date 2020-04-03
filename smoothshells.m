@@ -6,8 +6,6 @@ function [POut,tauOut,COut,X,Y] = smoothshells(input1,input2,param)
 if ~exist('param','var')
     param = struct;
     param = standardparams(param);
-    param.noPlot = false; %turn on/off for intermediate plots
-    param.GPUcorrespondences = true; % recommended option = true. Turn off, if no GPU is available
 end
 
 kArray = [20,20+round(linspace(1,(param.kMax-20).^(1/4),param.kArrayLength).^4)];

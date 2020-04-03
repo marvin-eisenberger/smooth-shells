@@ -57,6 +57,10 @@ if ~isfield(param,'normalDamping')
     param.normalDamping = 0.04;
 end
 
+if ~isfield(param,'numMCMC')
+    param.numMCMC = 100;
+end
+
 if ~isfield(param,'numSub')
     param.numSub = 1;
 end
